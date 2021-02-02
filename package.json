@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
+  "browserslist": [
+    "defaults",
+    "ie 11"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gtyamamoto/webpack-fun-stuffs.git"
@@ -16,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/gtyamamoto/webpack-fun-stuffs/issues"
   },
-  "homepage": "https://github.com/gtyamamoto/webpack-fun-stuffs#readme"
+  "homepage": "https://github.com/gtyamamoto/webpack-fun-stuffs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.5.0"
+  }
 }
