@@ -1,5 +1,6 @@
 
 const path = require('path')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -27,6 +28,7 @@ module.exports = {
                         loader: 'babel-loader',
                         options: {
                             presets: ['@babel/env'],
+                            // Suporte a js experimental como Class e parametros dentro dela, private,etc..
                             plugins: ['@babel/plugin-proposal-class-properties']
                         }
                     }
@@ -39,5 +41,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     mode: 'none',
-    target: 'browserslist'
+    target: 'browserslist',
+    plugins: [
+        // plugin para mimificacao/otimizacao dos arquivos gerados
+        new TerserWebpackPlugin()
+    ]
 }
